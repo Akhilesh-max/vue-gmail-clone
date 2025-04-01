@@ -35,7 +35,7 @@ export default {
     data ({ to }) {
       // Promise sugar syntax: return an object that contains Promise fields.
       // http://router.vuejs.org/en/pipeline/data.html#promise-sugar
-      document.title = 'Profile: ' + to.params.id + ' | Vue.js HN Clone'
+      document.title = 'Profile: ' + to.params.id + ' | Hacker News Clone by Akhilesh-max'
       return {
         user: store.fetchUser(to.params.id)
       }

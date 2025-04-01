@@ -43,7 +43,7 @@ export default {
   route: {
     data ({ to }) {
       return store.fetchItem(to.params.id).then(item => {
-        document.title = item.title + ' | Vue.js HN Clone'
+        document.title = item.title + ' | Hacker News Clone by Akhilesh-max'
         return {
           item,
           // the final resolved data can further contain Promises

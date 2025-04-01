@@ -50,7 +50,7 @@ export default {
       //    the entire object, because we don't want to update the page before
       //    the items are fetched.
       const page = +to.params.page
-      document.title = 'Vue.js HN Clone'
+      document.title = 'Hacker News Clone by Akhilesh-max'
       return store.fetchItemsByPage(page).then(items => ({
         page,
         items
@@ -86,17 +86,38 @@ export default {
 .news-view
   padding-left 5px
   padding-right 15px
+  min-height 500px
+  position relative
   &.loading:before
     content "Loading..."
     position absolute
     top 16px
     left 20px
+    font-weight bold
+    color #ff6600
+    animation pulse 1.5s infinite
   .nav
     padding 10px 10px 10px 40px
     margin-top 10px
-    border-top 2px solid #f60
+    border-top 2px solid #ff6600
+    display flex
+    align-items center
     a
-      margin-right 10px
+      margin-right 15px
+      padding 5px 10px
+      color #ff6600
+      font-weight 500
+      border-radius 3px
+      transition all 0.2s ease
       &:hover
-        text-decoration underline
+        background-color rgba(255, 102, 0, 0.1)
+        text-decoration none
+
+@keyframes pulse
+  0%
+    opacity 0.6
+  50%
+    opacity 1
+  100%
+    opacity 0.6
 </style>
